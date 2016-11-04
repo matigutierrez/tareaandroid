@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<ion-view view-title="Dashboard"g-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}" >>
+  <ion-content class="padding" >
+  <br>
+  <br>
+    <p>
+    <div class="container">
+  <h2>Tabla</h2>
+  <table class="table" class="col-md-20" >
+    <thead>
+      <tr>
+        <th></th>  
+        <th>Nombre</th>
+        <th>Descripcion</th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <td> <img ng-src="{{chat.face}}" style="width: 64px; height: 64px"></td>
+        <td>{{chat.name}}</td>
+        <td>{{chat.lastText}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    </p>
+  </ion-content>
+</ion-view>
